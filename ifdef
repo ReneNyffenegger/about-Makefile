@@ -1,0 +1,31 @@
+# vim: ft=make
+
+FOO=defined
+VAR_F=FOO
+VAR_B=BAR
+
+all:
+
+  ifdef FOO
+	  @echo FOO is defined
+  else
+	  @echo FOO is not defined
+  endif
+
+  ifdef BAR
+	  @echo BAR is defined
+  else
+	  @echo BAR is not defined
+  endif
+
+  ifdef $(VAR_F)
+	  @echo $(VAR_F) is defined
+  else
+	  @echo $(VAR_F) is not defined
+  endif
+
+  ifdef $(VAR_B)
+	  @echo $(VAR_B) is defined
+  else
+	  @echo $(VAR_B) is not defined
+  endif
