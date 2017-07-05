@@ -1,0 +1,12 @@
+# vim: ft=make
+
+VAR=foo bar baz
+
+# Print some information with $(info …)
+#
+$(info )
+$(info static text)
+$(info $$VAR=$(VAR))
+
+all:
+	@true
