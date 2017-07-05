@@ -11,7 +11,7 @@ FILES=\
 
 DIRS=$(dir $(FILES))
 
-DIRS_UNIQUE=$(shell (for DIR in $(DIRS); do echo $$DIR; done | sort | uniq))
+DIRS_UNIQUE=$(shell for DIR in $(DIRS); do echo $$DIR; done | sort | uniq)
 
 all:
 	@echo $(DIRS)
