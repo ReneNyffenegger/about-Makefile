@@ -1,0 +1,16 @@
+# vim: ft=make
+
+#
+#  make -f origin VAR=something
+#
+
+FRUIT=apple
+
+$(info $(origin CC)       ) # default
+$(info $(origin FRUIT)    ) # file
+$(info $(origin VAR)      ) # command line
+$(info $(origin HOME)     ) # environment
+$(info $(origin FOOBARBAZ)) # undefined
+
+all:
+	@true
