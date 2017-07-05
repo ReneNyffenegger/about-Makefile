@@ -1,0 +1,22 @@
+# vim: ft=make
+
+# 
+# Apparently, ifeq is not allowed outside of a target.
+#
+
+var=foo
+
+
+all:
+
+  ifeq ($(var),foo)
+	  @echo $(var) == foo
+  else
+  	@echo $(var) != foo
+  endif
+
+  ifeq ($(var),bar)
+	  @echo $(var) == bar
+  else
+	  @echo $(var) != bar
+  endif
