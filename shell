@@ -1,0 +1,11 @@
+# vim: ft=make
+
+#
+# Read the output of a shell command.
+#
+
+FILES=$(shell ls -1)
+$(info $(FILES))
+
+all:
+	@true
