@@ -1,0 +1,26 @@
+# vim: ft=make
+
+#
+#  $@ is represents the target
+#
+
+all: dep_1 dep_2
+	@echo all, $$\@ = $@
+
+dep_1: dep_1_a dep_1_b
+	@echo dep_1, $$\@ = $@
+
+dep_2: dep_2_y dep_2_z
+	@echo dep_2, $$\@ = $@
+
+dep_1_a:
+	@echo dep_1_a, $$\@ = $@
+
+dep_1_b:
+	@echo dep_1_b, $$\@ = $@
+
+dep_2_y:
+	@echo dep_2_y, $$\@ = $@
+
+dep_2_z:
+	@echo dep_2_z, $$\@ = $@
