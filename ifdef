@@ -1,5 +1,9 @@
 # vim: ft=make
 
+# 
+# Apparently, ifdef is not allowed outside of a target.
+#
+
 FOO=defined
 VAR_F=FOO
 VAR_B=BAR
