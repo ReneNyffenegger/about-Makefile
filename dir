@@ -1,0 +1,21 @@
+# vim: ft=make
+
+FILES=\
+ dir_1/sub_dir_a/file_1_a_i \
+ dir_1/sub_dir_a/file_1_a_ii \
+ dir_1/sub_dir_a/file_1_a_iii \
+ dir_1/sub_dir_b/file_1_b_i \
+ dir_1/sub_dir_b/file_1_b_ii \
+ dir_2/sub_dir_y/file_2_y_i \
+ dir_2/sub_dir_z/file_2_z_i
+
+DIRS=$(dir $(FILES))
+
+DIRS_UNIQUE=$(shell (for DIR in $(DIRS); do echo $$DIR; done | sort | uniq))
+
+all:
+	@echo $(DIRS)
+	@echo
+	@(for DIR in $(DIRS); do echo $$DIR; done | sort | uniq)
+	@echo
+	@echo $(DIRS_UNIQUE)
