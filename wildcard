@@ -1,0 +1,7 @@
+# vim: ft=make
+
+FILES_STARTING_WITH_I=$(wildcard i*)
+$(info Files starting with i $(FILES_STARTING_WITH_I))
+
+all:
+	@true
