@@ -1,0 +1,9 @@
+VAR+=Foo
+VAR+=Bar
+VAR+=Baz
+
+$(info )
+$(info $$VAR=$(VAR))
+
+all:
+	@true
