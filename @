@@ -1,0 +1,5 @@
+
+
+does-not-exist: @
+	echo Without @, the command is repeated
+	@echo @ith, the command is not printed
