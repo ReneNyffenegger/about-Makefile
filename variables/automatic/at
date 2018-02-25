@@ -1,7 +1,7 @@
 # vim: ft=make
 
 #
-#  $@ is represents the target
+#  $@ represents the target
 #
 
 all: dep_1 dep_2

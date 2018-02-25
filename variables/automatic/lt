@@ -1,7 +1,7 @@
 # vim: ft=make
 
 #
-#  $< is represents the first prerequisiste
+#  $< represents the first prerequisiste
 #
 
 all: dep_1 dep_2 dep_3
