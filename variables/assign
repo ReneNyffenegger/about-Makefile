@@ -1,0 +1,25 @@
+#
+#  make -f assign
+#  make -f assign VAL_THREE=something
+#
+
+VARIABLE = now
+
+VAL_ONE     = ${VARIABLE}
+VAL_TWO    := ${VARIABLE}
+
+# Only assign to VAL_THREE if VAL_THREE is not yet
+# initialized
+VAL_THREE  ?= Foo
+
+VARIABLE = later
+
+$(info )
+
+$(info $$VAL_ONE=$(VAL_ONE))     # VAL_ONE=later
+$(info $$VAL_TWO=$(VAL_TWO))     # VAL_TWO=now
+$(info $$VAL_THREE=$(VAL_THREE)) #
+
+.phony run:
+run:
+	@true
