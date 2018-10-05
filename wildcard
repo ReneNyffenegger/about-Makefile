@@ -1,7 +1,6 @@
-# vim: ft=make
+FILES_STARTING_WITH_B=$(wildcard b*)
 
-FILES_STARTING_WITH_I=$(wildcard i*)
-$(info Files starting with i $(FILES_STARTING_WITH_I))
+$(info Files starting with b: $(FILES_STARTING_WITH_B))
 
 all:
 	@true
