@@ -1,8 +1,11 @@
-#
-#  Substitute def with XYZ in abcdefghijkl and
-#  assign to variable text:
-#
-text=$(subst def,XYZ,abcdefghijkl)
+text = Hello foo
+what = foo
+with = world
 
-all:
-	@echo $(text)
+#
+# Change text, replace foo with world:
+#
+substituted = $(subst $(what), $(with), $(text))
+
+dummy:
+	@echo $(substituted)
